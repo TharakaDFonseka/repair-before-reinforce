@@ -25,10 +25,12 @@ Plain HTML/CSS/JS — no build step required. Equations are rendered with KaTeX 
    (keep the surrounding `<figure>` and `<figcaption>`).
 5. Equations use standard LaTeX inside `\[ ... \]` — edit them directly in the `equation-card` divs.
 
+Local copy on Della: `/scratch/gpfs/JHA/tf8712/repair-before-reinforce-site/`
+
 ## Preview locally
 
 ```bash
-cd repair-before-reinforce-site
+cd /scratch/gpfs/JHA/tf8712/repair-before-reinforce-site
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
@@ -41,12 +43,12 @@ python3 -m http.server 8000
 2. Push this folder:
 
    ```bash
-   cd repair-before-reinforce-site
+   cd /scratch/gpfs/JHA/tf8712/repair-before-reinforce-site
    git init
    git add .
    git commit -m "Paper website"
    git branch -M main
-   git remote add origin git@github.com:<username>/repair-before-reinforce.git
+   git remote add origin git@github.com:TharakaDFonseka/repair-before-reinforce.git
    git push -u origin main
    ```
 
