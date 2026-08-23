@@ -30,7 +30,7 @@
     <div class="topnav-inner">
       <a class="brand" href="#top">Repair&nbsp;Before&nbsp;Reinforce</a>
       <div class="navlinks">
-        <a href="#abstract">Abstract</a>
+        <a href="#overview">Overview</a>
         <a href="#motivation">Motivation</a>
         <a href="#method">Method</a>
         <a href="#pipeline">Pipeline</a>
@@ -74,15 +74,39 @@
 
   <main class="content">
 
-    <!-- ============================= ABSTRACT ============================= -->
-    <section id="abstract" class="section">
-      <h2>Abstract</h2>
-      <p class="abstract-text">
-        [PLACEHOLDER — paste your abstract here. One paragraph, roughly 150&ndash;250 words.
-        State the problem (limits of KG-grounded reasoning with noisy or incomplete context), the key idea
-        (repairing / augmenting the knowledge-graph context <em>before</em> the reinforcement stage), the setup
-        (models, domain, benchmarks), and the headline results with concrete numbers.]
-      </p>
+    <!-- ============================= OVERVIEW ============================= -->
+    <section id="overview" class="section overview-section">
+      <h2>At a Glance</h2>
+      <div class="overview-grid">
+        <article class="overview-card why">
+          <div class="overview-head">
+            <span class="overview-emoji" aria-hidden="true">🔍</span>
+            <h3>Why</h3>
+          </div>
+          <p>Large language models (LLMs) can answer many questions, but they often struggle when the answer requires connecting multiple facts. In knowledge-intensive domains, we need models that do more than guess&mdash;we need them to reason from clear, traceable evidence.</p>
+        </article>
+        <article class="overview-card what">
+          <div class="overview-head">
+            <span class="overview-emoji" aria-hidden="true">🧩</span>
+            <h3>What</h3>
+          </div>
+          <p>This project develops a framework for building more reliable knowledge-grounded reasoning systems. It uses knowledge graphs to represent facts as structured relationships and enriches those facts with supporting context, so the model learns how knowledge pieces connect rather than treating them as isolated statements.</p>
+        </article>
+        <article class="overview-card how">
+          <div class="overview-head">
+            <span class="overview-emoji" aria-hidden="true">⚙️</span>
+            <h3>How</h3>
+          </div>
+          <p>The framework follows a staged process. First, it trains the model using knowledge-grounded question-answer examples. Then, it identifies and repairs knowledge gaps that remain after fine-tuning. Finally, it applies reinforcement learning (RL) to improve the model&rsquo;s ability to combine learned facts into longer reasoning chains.</p>
+        </article>
+        <article class="overview-card goal">
+          <div class="overview-head">
+            <span class="overview-emoji" aria-hidden="true">🎯</span>
+            <h3>Goal</h3>
+          </div>
+          <p>The goal is to help LLMs move from simply recalling facts to performing reliable, evidence-grounded, multi-step reasoning. Although the framework is evaluated in biomedical question-answering, it is designed to support many domains where structured knowledge and trustworthy reasoning are important.</p>
+        </article>
+      </div>
     </section>
 
     <!-- ============================= MOTIVATION ============================= -->
