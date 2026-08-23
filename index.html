@@ -121,14 +121,9 @@
       </p>
       <figure class="figure" id="pipeline-figure">
         <div class="pipeline-frame">
-          <object data="assets/pipeline.pdf" type="application/pdf" class="pipeline-embed" aria-label="Training pipeline figure">
-            <div class="placeholder-box wide">
-              <span class="ph-label">FIGURE 1</span>
-              <span class="ph-hint">Upload <code>pipeline.pdf</code> to the <code>assets/</code> folder to display the pipeline figure here.</span>
-            </div>
-          </object>
+          <img src="assets/pipeline.png" alt="Repair Before Reinforce pipeline: biomedical papers, KG extraction, context augmentation, QA generation, SFT, adaptive repair, RL, and improved models." />
         </div>
-        <figcaption><strong>Figure 1. Training pipeline.</strong> From knowledge-grounded fine-tuning, to repairing leftover gaps, to reinforcement learning for longer reasoning chains.</figcaption>
+        <figcaption><strong>Figure 1. Training pipeline.</strong> Papers are turned into a knowledge graph, enriched with context, and used to generate QA. After SFT, path <em>b</em> repairs remaining knowledge gaps before RL; path <em>a</em> is the usual SFT-then-RL recipe.</figcaption>
       </figure>
     </section>
     </div>

@@ -332,6 +332,15 @@ body {
   border: 0;
 }
 
+.pipeline-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 @media (max-width: 720px) {
   .overview-grid { grid-template-columns: 1fr; }
   .connector-svg { display: none; }
