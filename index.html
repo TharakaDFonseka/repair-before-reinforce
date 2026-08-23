@@ -113,24 +113,34 @@
     <section id="motivation" class="section">
       <h2>Why Repair Before Reinforce?</h2>
       <p>
-        [PLACEHOLDER — 1&ndash;2 paragraphs of motivation. Explain the failure mode you observed:
-        e.g., reinforcement learning on top of flawed or incomplete KG context amplifies errors instead of
-        fixing them, so the context must be repaired first. Make the reader feel the problem before you
-        present the solution.]
+        The common recipe is simple: first fine-tune a model with domain data, then apply RL to make it better.
+        But our results suggest an important missing step.
+      </p>
+      <p class="pull-quote">
+        RL works best when the model already has a reliable foundation. Think of it like learning calculus:
+        before someone can master differentiation or integration, they need to understand addition, multiplication,
+        division, and algebra. If those basics are shaky, advanced training will not fix everything&mdash;it may
+        simply build on unstable knowledge.
+      </p>
+      <p>
+        We found the same idea in knowledge-grounded reasoning. Instead of applying RL immediately after SFT,
+        we first check what lower-level facts the model still fails to learn. Then we repair those missing pieces
+        through targeted training. Only after that do we apply RL.
+      </p>
+      <p>
+        This <strong>Repair Before Reinforce</strong> strategy gives the model a cleaner factual foundation.
+        As a result, RL can focus on composing learned facts into longer reasoning chains, rather than
+        struggling with unresolved knowledge gaps. In our experiments, this repaired initialization led to
+        stronger multi-hop reasoning performance.
       </p>
 
       <figure class="figure placeholder-figure">
         <div class="placeholder-box">
           <span class="ph-label">FIGURE 1</span>
-          <span class="ph-hint">Motivating example — e.g., a query answered incorrectly due to a broken / missing KG context, side by side with the repaired version.</span>
+          <span class="ph-hint">Motivating example &mdash; e.g., a query answered incorrectly due to a broken / missing KG context, side by side with the repaired version.</span>
         </div>
-        <figcaption><strong>A motivating example.</strong> [PLACEHOLDER — caption explaining the figure.]</figcaption>
+        <figcaption><strong>A motivating example.</strong> [PLACEHOLDER &mdash; caption explaining the figure.]</figcaption>
       </figure>
-
-      <p>
-        [PLACEHOLDER — one paragraph contrasting with existing approaches (outcome-only RL, retrieval
-        without repair, etc.) and why they fall short.]
-      </p>
     </section>
 
     <!-- ============================= KEY IDEA ============================= -->
