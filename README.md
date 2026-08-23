@@ -8,7 +8,7 @@ Plain HTML/CSS/JS — no build step required. Equations are rendered with KaTeX 
 - `index.html` — all page content. Everything you need to edit is marked with `[PLACEHOLDER — ...]`.
 - `styles.css` — the visual theme (colors are defined as variables at the top of the file).
 - `script.js` — KaTeX equation rendering and the copy-BibTeX button.
-- `assets/` — put your figures here (PNG/SVG), then replace the dashed placeholder boxes.
+- `assets/` — put your figures here. For the pipeline figure, drop the PDF at `assets/pipeline.pdf`.
 
 ## Filling in content
 

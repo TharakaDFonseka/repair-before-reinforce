@@ -294,8 +294,47 @@ body {
 .overview-card.how .overview-emoji { background: #f7efd8; }
 .overview-card.goal .overview-emoji { background: #e4edf6; }
 
+.overview-card.how {
+  position: relative;
+  box-shadow: 0 0 0 2px rgba(196, 146, 42, 0.18);
+}
+
+.overview-to-pipeline {
+  position: relative;
+}
+
+.connector-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pipeline-preview {
+  padding-top: 1.4rem;
+}
+
+.pipeline-frame {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(28, 33, 48, 0.06);
+}
+
+.pipeline-embed {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
 @media (max-width: 720px) {
   .overview-grid { grid-template-columns: 1fr; }
+  .connector-svg { display: none; }
 }
 
 .pull-quote {

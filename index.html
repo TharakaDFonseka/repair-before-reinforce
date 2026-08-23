@@ -74,6 +74,9 @@
 
   <main class="content">
 
+    <div class="overview-to-pipeline" id="overview-to-pipeline">
+    <svg class="connector-svg" id="how-to-pipeline" aria-hidden="true"></svg>
+
     <!-- ============================= OVERVIEW ============================= -->
     <section id="overview" class="section overview-section">
       <h2>At a Glance</h2>
@@ -92,7 +95,7 @@
           </div>
           <p>This project develops a framework for building more reliable knowledge-grounded reasoning systems. It uses knowledge graphs to represent facts as structured relationships and enriches those facts with supporting context, so the model learns how knowledge pieces connect rather than treating them as isolated statements.</p>
         </article>
-        <article class="overview-card how">
+        <article class="overview-card how" id="how-card">
           <div class="overview-head">
             <span class="overview-emoji" aria-hidden="true">⚙️</span>
             <h3>How</h3>
@@ -108,6 +111,27 @@
         </article>
       </div>
     </section>
+
+    <!-- ============================= PIPELINE FIGURE ============================= -->
+    <section id="pipeline-preview" class="section pipeline-preview">
+      <h2>The Pipeline</h2>
+      <p>
+        The How tile above is this staged process: knowledge-grounded training, repair of remaining gaps,
+        then reinforcement learning. The figure below walks through the full pipeline.
+      </p>
+      <figure class="figure" id="pipeline-figure">
+        <div class="pipeline-frame">
+          <object data="assets/pipeline.pdf" type="application/pdf" class="pipeline-embed" aria-label="Training pipeline figure">
+            <div class="placeholder-box wide">
+              <span class="ph-label">FIGURE 1</span>
+              <span class="ph-hint">Upload <code>pipeline.pdf</code> to the <code>assets/</code> folder to display the pipeline figure here.</span>
+            </div>
+          </object>
+        </div>
+        <figcaption><strong>Figure 1. Training pipeline.</strong> From knowledge-grounded fine-tuning, to repairing leftover gaps, to reinforcement learning for longer reasoning chains.</figcaption>
+      </figure>
+    </section>
+    </div>
 
     <!-- ============================= MOTIVATION ============================= -->
     <section id="motivation" class="section">
