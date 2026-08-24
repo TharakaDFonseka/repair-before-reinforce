@@ -303,18 +303,21 @@ body {
   position: relative;
 }
 
-.connector-svg {
-  position: absolute;
-  inset: 0;
+.how-connector {
+  height: 88px;
+  margin: 0.15rem 0 0;
+  pointer-events: none;
+}
+
+.how-connector svg {
+  display: block;
   width: 100%;
   height: 100%;
   overflow: visible;
-  pointer-events: none;
-  z-index: 3;
 }
 
 .pipeline-preview {
-  padding-top: 1.4rem;
+  padding-top: 0.4rem;
 }
 
 .pipeline-frame {
@@ -343,7 +346,7 @@ body {
 
 @media (max-width: 720px) {
   .overview-grid { grid-template-columns: 1fr; }
-  .connector-svg { display: none; }
+  .how-connector { display: none; }
 }
 
 .pull-quote {
