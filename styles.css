@@ -296,7 +296,14 @@ body {
 
 .overview-card.how {
   position: relative;
-  box-shadow: 0 0 0 2px rgba(196, 146, 42, 0.18);
+  cursor: pointer;
+}
+
+.overview-card.how .card-jump {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
 }
 
 .overview-to-pipeline {
