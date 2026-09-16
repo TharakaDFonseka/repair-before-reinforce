@@ -10,6 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const codeBtn = document.getElementById("code-btn");
+  const codeModal = document.getElementById("code-modal");
+  const closeModal = () => {
+    if (!codeModal) return;
+    codeModal.hidden = true;
+    document.body.style.overflow = "";
+  };
+  const openModal = () => {
+    if (!codeModal) return;
+    codeModal.hidden = false;
+    document.body.style.overflow = "hidden";
+  };
+  if (codeBtn && codeModal) {
+    codeBtn.addEventListener("click", openModal);
+    codeModal.querySelectorAll("[data-close-modal]").forEach((el) => {
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !codeModal.hidden) closeModal();
+    });
+  }
+
   // Copy-BibTeX button
   const copyBtn = document.getElementById("copy-bibtex");
   const bibtex = document.getElementById("bibtex-text");
